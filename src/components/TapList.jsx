@@ -7,10 +7,13 @@ function TapList(props) {
       <style jsx>{`
           .kegDiv {
             width: 300px;
+            border: 2px solid black;
+            margin: 10px;
+            text-align: center;
           }
 
       `}</style>
-      <img scr={props.img}></img>
+      <img width="275px" src={props.img}></img>
       <h2>Name: {props.name}</h2>
       <h2>Brewer: {props.brewer}</h2>
       <h4>Price: {props.price}</h4>

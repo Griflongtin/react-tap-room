@@ -1,5 +1,9 @@
 import React from 'React';
 import TapList from './TapList';
+import MotherEarth from '../Assets/mother-earth.png';
+import Laurelwood from '../Assets/laurelwood.jpg';
+import Stone from '../Assets/stone-logo.png';
+import NewBelgium from '../Assets/new-belgium.jpg';
 
 const kegsList = [
   {
@@ -7,7 +11,7 @@ const kegsList = [
     brewer: 'Mother Earth',
     price: 20,
     abv: 4.5,
-    img: 'motherearth',
+    img: MotherEarth,
     quantity: 124
   },
   {
@@ -15,7 +19,7 @@ const kegsList = [
     brewer: 'Mother Earth',
     price: 14,
     abv: 8,
-    img: 'motherearth',
+    img: MotherEarth,
     quantity: 124
   },
   {
@@ -23,7 +27,7 @@ const kegsList = [
     brewer: 'Laurelwood',
     price: 16,
     abv: 6,
-    img: 'laurelwood',
+    img: Laurelwood,
     quantity: 124
   },
   {
@@ -31,7 +35,7 @@ const kegsList = [
     brewer: 'Stone',
     price: 15,
     abv: 6.5,
-    img: 'stone',
+    img: Stone,
     quantity: 124
   },
   {
@@ -39,7 +43,7 @@ const kegsList = [
     brewer: 'New Belgium',
     price: 20,
     abv: 4.5,
-    img: 'newbelgium',
+    img: NewBelgium,
     quantity: 124
   }
 ];
