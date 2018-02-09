@@ -4,8 +4,12 @@
   "description": "",
   "main": "webpack.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint src/** src/**/**; exit 0",
+    "lint --fix": "eslint src/** src/**/** --fix; exit 0",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":  "webpack-dev-server"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Griflongtin/react-tap-room.git"
