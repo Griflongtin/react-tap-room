@@ -15,10 +15,11 @@ function Nav() {
           }
           li {
             list-style: none;
-            padding: 10px;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 145px;
-            border: 2px dashed red;
+            height 45px;
           }
           li:hover {
             background-color: brown;

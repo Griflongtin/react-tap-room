@@ -2,7 +2,8 @@ import React from 'React';
 import ReactBeerLogo from '../Assets/beer-logo.png';
 function Logo() {
   const logoStyles = {
-    width: 100
+    height: 40,
+    filter: 'invert(100%)'
   };
   return (
     <div>
