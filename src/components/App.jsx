@@ -4,6 +4,13 @@ import Body from './Body';
 function App() {
   return (
     <div>
+      <style global jsx>{`
+          * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+          }
+      `}</style>
       <Header />
       <Body />
       <p>App Works</p>
