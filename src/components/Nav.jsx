@@ -8,10 +8,25 @@ function Nav() {
   };
   return (
     <div>
-      <Link to="/" style={linkStyle}>Taps</Link>
-      <Link to="/" style={linkStyle}>Input New Keg</Link>
-      <Link to="/" style={linkStyle}>Keg Inventory</Link>
-      <Link to="/aboutUs" style={linkStyle}>About Us</Link>
+      <style jsx>{`
+          ul {
+            display: flex;
+          }
+      `}</style>
+      <ul>
+        <li>
+          <Link to="/" style={linkStyle}>Taps</Link>
+        </li>
+        <li>
+          <Link to="/" style={linkStyle}>Input New Keg</Link>
+        </li>
+        <li>
+          <Link to="/" style={linkStyle}>Keg Inventory</Link>
+        </li>
+        <li>
+          <Link to="/aboutUs" style={linkStyle}>About Us</Link>
+        </li>
+      </ul>
     </div>
   );
 }
