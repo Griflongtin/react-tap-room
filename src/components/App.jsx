@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'React';
 
 function App() {
   return (
     <div>
-      App Works!
+      <p>App Works</p>
     </div>
   );
 }
