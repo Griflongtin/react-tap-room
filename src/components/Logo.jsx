@@ -1,9 +1,12 @@
 import React from 'React';
 import ReactBeerLogo from '../Assets/beer-logo.png';
 function Logo() {
+  const logoStyles = {
+    width: 100
+  };
   return (
     <div>
-      <img src={ReactBeerLogo} />
+      <img style={logoStyles} src={ReactBeerLogo} />
     </div>
   );
 }
