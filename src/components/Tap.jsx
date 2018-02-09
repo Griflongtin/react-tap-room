@@ -1,11 +1,11 @@
 import React from 'React';
 import TapList from './TapList';
 
-const kegs = [
+const kegsList = [
   {
     name: 'Cali Creamin',
     brewer: 'Mother Earth',
-    price: 'green',
+    price: 20,
     abv: 4.5,
     img: 'motherearth',
     quantity: 124
@@ -13,14 +13,15 @@ const kegs = [
   {
     name: 'Sintax',
     brewer: 'Mother Earth',
-    price: 'red', abv: 8,
+    price: 14,
+    abv: 8,
     img: 'motherearth',
     quantity: 124
   },
   {
     name: 'Free Range Red',
     brewer: 'Laurelwood',
-    price: 'green',
+    price: 16,
     abv: 6,
     img: 'laurelwood',
     quantity: 124
@@ -28,7 +29,7 @@ const kegs = [
   {
     name: 'Stone IPA',
     brewer: 'Stone',
-    price: 'red',
+    price: 15,
     abv: 6.5,
     img: 'stone',
     quantity: 124
@@ -36,7 +37,7 @@ const kegs = [
   {
     name: 'Fat Tire',
     brewer: 'New Belgium',
-    price: 'purple',
+    price: 20,
     abv: 4.5,
     img: 'newbelgium',
     quantity: 124
@@ -45,8 +46,27 @@ const kegs = [
 
 function Tap() {
   return (
-    <div>
-      <p>Tap Room</p>
+    <div className="kegBox">
+      <style jsx>{`
+          .kegBox {
+            margin: 0 auto;
+            width: 60%;
+            border: 1px dashed red;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px;
+          }
+      `}</style>
+      {kegsList.map((tapList, index) =>
+        <TapList name={tapList.name}
+          brewer={tapList.brewer}
+          price={tapList.price}
+          abv={tapList.abv}
+          img={tapList.img}
+          quantity={tapList.quantity}
+          key={index}/>
+      )}
     </div>
   );
 }
