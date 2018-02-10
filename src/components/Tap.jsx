@@ -55,7 +55,6 @@ function Tap() {
           .kegBox {
             margin: 0 auto;
             width: 60%;
-            border: 1px dashed red;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
