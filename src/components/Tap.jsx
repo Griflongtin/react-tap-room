@@ -50,7 +50,7 @@ const kegsList = [
 
 function Tap() {
   return (
-    <div className="kegBox">
+    <div>
       <style jsx>{`
           .kegBox {
             margin: 0 auto;
@@ -60,16 +60,22 @@ function Tap() {
             flex-wrap: wrap;
             padding: 10px;
           }
+          h1 {
+            text-align: center;
+          }
       `}</style>
-      {kegsList.map((tapList, index) =>
-        <TapList name={tapList.name}
-          brewer={tapList.brewer}
-          price={tapList.price}
-          abv={tapList.abv}
-          img={tapList.img}
-          quantity={tapList.quantity}
-          key={index}/>
-      )}
+      <h1>Kegs For Sale</h1>
+      <div className="kegBox">
+        {kegsList.map((tapList, index) =>
+          <TapList name={tapList.name}
+            brewer={tapList.brewer}
+            price={tapList.price}
+            abv={tapList.abv}
+            img={tapList.img}
+            quantity={tapList.quantity}
+            key={index}/>
+        )}
+      </div>
     </div>
   );
 }
