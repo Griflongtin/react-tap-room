@@ -1,3 +1,13 @@
+# _DOC Help_
+
+#### _This is a website for a Bar to keep track of it inventory_
+
+#### By _**GRIFFIN P LOGNTIN**_
+
+## Description
+
+_Helps employees and customers keep track and buy Beer._
+
 ## Struggle
 
 * windows Command Prompt want take touch command: Solution using gitBash.
@@ -5,7 +15,36 @@
 * Have to make the body and switch tag for link in Nav so I can work on Nav
 * I forgot about the HashRouter That live in index.jsx. kinda important
 
-
-
 ## File Tree
 ![tap room tree](/src/Assets/tap-room-tree.jpg)
+
+## Setup/Installation Requirements
+
+#### You will need to clone the repository:
+
+* Open up terminal
+* Copy and paste this:
+* cd ~
+* cd desktop
+* git clone https://github.com/Griflongtin/react-tap-room.git
+* cd react-tap-room
+* mpn install
+* npm run start
+
+* _Then open this http://localhost:8080_
+
+## Support and contact details
+
+_For support or any question please E-mail me at GrifLongtin@live.com_
+
+## Technologies Used
+
+  * Atom
+  * JavaScript
+  * CSS
+  * Node
+  * React
+
+### License
+
+Copyright (c) 2016 **_GRIFFIN P LONGTIN_**
