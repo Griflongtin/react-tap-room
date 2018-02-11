@@ -1,4 +1,4 @@
-# _DOC Help_
+# _React Tap Room_
 
 #### _This is a website for a Bar to keep track of it inventory_
 
