@@ -3,11 +3,6 @@ import React from 'React';
 function InputForm() {
   return (
     <div className="inputFormDiv">
-      <style jsx>{`
-          .inputFormDiv {
-            display: flex:
-          }
-      `}</style>
       <div>
         <h1>Input a new keg</h1>
       </div>

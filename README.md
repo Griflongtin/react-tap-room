@@ -15,8 +15,15 @@ _Helps employees and customers keep track and buy Beer._
 * Have to make the body and switch tag for link in Nav so I can work on Nav
 * I forgot about the HashRouter That live in index.jsx. kinda important
 
-## File Tree
+## File Tree old
 ![tap room tree](/src/Assets/tap-room-tree.jpg)
+
+## File Tree New
+![tap room tree](/src/Assets/react-taps-tree.jpg)
+
+## New component tree
+
+_I put the state in the body component. This is the closest comin ancestor._
 
 ## Setup/Installation Requirements
 
