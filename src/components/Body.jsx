@@ -5,6 +5,7 @@ import Tap from './Tap';
 import AboutUs from './AboutUs';
 import Inventory from './Inventory';
 import InputForm from './InputForm';
+import Error404 from './Error404';
 
 import MotherEarth from '../Assets/mother-earth.png';
 import Laurelwood from '../Assets/laurelwood.jpg';
@@ -76,6 +77,7 @@ class Body extends React.Component {
           <Route path='/inventory' render={()=><Inventory masterKegListPass={this.state.masterKegList} />} />
           <Route path='/inputForm' render={()=><InputForm newKegInput={this.handleAddingKeg}/>} />
           <Route path='/aboutUs' component={ AboutUs } />
+          <Route component={Error404} />
         </Switch>
       </div>
     );
