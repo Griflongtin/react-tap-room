@@ -7,8 +7,9 @@ function TapList(props) {
       <style jsx>{`
           .kegDiv {
             width: 300px;
+            padding: 5px;
             border: 2px solid black;
-            margin: 10px;
+            margin: 10px 10px 0; 
             text-align: center;
           }
 

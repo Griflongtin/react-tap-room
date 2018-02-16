@@ -23,6 +23,13 @@ function Tap(props) {
           .hide {
             display: none;
           }
+          button {
+            margin: 0 10px;
+            height: 40px;
+            width:300px;
+            background-color: gray;
+            border: 1px solid red;
+          }
       `}</style>
       <h1>Beers For Sale</h1>
       <div className="kegBox">

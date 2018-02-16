@@ -11,6 +11,7 @@ function Error404(props){
   const imgStyles = {
     objectFit: 'cover'
   };
+  
   return (
     <div style={errorDivStyles}>
       <h2>The page {props.location.pathname} does not exist!</h2>
