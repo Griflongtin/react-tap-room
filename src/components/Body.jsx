@@ -61,14 +61,20 @@ class Body extends React.Component {
     this.state = {
       masterKegList: kegsList
     };
+    this.handleAddingKeg = this.handleAddingKeg.bind(this);
   }
+  handleAddingKeg(newKeg){
+    let newMasterKegList = Object.assign({}, this.state.masterKegList,  {newKeg});
+    this.setState({masterKegList: newMasterKegList});
+  }
+
   render(){
     return (
       <div>
         <Switch>
           <Route exact path='/' render={()=><Tap masterKegListPass={this.state.masterKegList} />} />
           <Route path='/inventory' render={()=><Inventory masterKegListPass={this.state.masterKegList} />} />
-          <Route path='/inputForm' render={()=><InputForm />} />
+          <Route path='/inputForm' render={()=><InputForm newKegInput={this.handleAddingKeg}/>} />
           <Route path='/aboutUs' component={ AboutUs } />
         </Switch>
       </div>

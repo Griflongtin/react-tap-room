@@ -1,16 +1,17 @@
 import React from 'React';
 import PropTypes from 'prop-types';
 
-function InputForm() {
+function InputForm(props) {
   let _names = null;
   let _brewer = null;
   let _price = null;
   let _abv = null;
   let _logo = null;
   let _quantity = null;
+
   function handleNewKegForm(event) {
     event.preventDefault();
-
+    props.newKegInput({name: _names.value, brewer: _brewer.value, price: _price.value, abv: _abv.value, img: _logo.value, quantity: _quantity.value});
     _names.value = '';
     _brewer.value = '';
     _price.value = '';
@@ -75,7 +76,7 @@ function InputForm() {
 }
 
 InputForm.propTypes = {
-
+  newKegInput: PropTypes.func
 };
 
 export default InputForm;

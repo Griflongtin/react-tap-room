@@ -13,7 +13,6 @@ function App() {
       `}</style>
       <Header />
       <Body />
-      <p>App Works</p>
     </div>
   );
 }
