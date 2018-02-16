@@ -3,6 +3,9 @@ import TapList from './TapList';
 import PropTypes from 'prop-types';
 
 function Tap(props) {
+  function newGlass(){
+    alert('Here you Go');
+  }
   return (
     <div>
       <style jsx>{`
@@ -17,18 +20,24 @@ function Tap(props) {
           h1 {
             text-align: center;
           }
+          .hide {
+            display: none;
+          }
       `}</style>
-      <h1>Kegs For Sale</h1>
+      <h1>Beers For Sale</h1>
       <div className="kegBox">
         {Object.keys(props.masterKegListPass).map(function(kegId) {
           let keg = props.masterKegListPass[kegId];
-          return <TapList name={keg.name}
-            brewer={keg.brewer}
-            price={keg.price}
-            abv={keg.abv}
-            img={keg.img}
-            quantity={keg.quantity}
-            key={kegId}/>;
+          return <div className={(keg.quantity >= 1)? 'show' : 'hide'}>
+            <TapList name={keg.name}
+              brewer={keg.brewer}
+              price={keg.price}
+              abv={keg.abv}
+              img={keg.img}
+              quantity={keg.quantity}
+              key={kegId}/>
+            <button onClick={newGlass}>Get a Glass</button>
+          </div>;
         })}
       </div>
     </div>
