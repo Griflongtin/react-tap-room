@@ -67,8 +67,8 @@ class Body extends React.Component {
       <div>
         <Switch>
           <Route exact path='/' render={()=><Tap masterKegListPass={this.state.masterKegList} />} />
-          <Route path='/inventory' component={ Inventory } />
-          <Route path='/inputForm' component={ InputForm } />
+          <Route path='/inventory' render={()=><Inventory masterKegListPass={this.state.masterKegList} />} />
+          <Route path='/inputForm' render={()=><InputForm />} />
           <Route path='/aboutUs' component={ AboutUs } />
         </Switch>
       </div>
