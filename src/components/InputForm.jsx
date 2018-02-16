@@ -1,12 +1,16 @@
 import React from 'React';
 
 function InputForm() {
+  function handleNewKegForm(event) {
+    event.preventDefault();
+    alert('new works');
+  }
   return (
     <div className="inputFormDiv">
       <div>
         <h1>Input a new keg</h1>
       </div>
-      <form>
+      <form onSubmit={handleNewKegForm}>
         <div>
           <label>
             Name:
@@ -32,7 +36,7 @@ function InputForm() {
             Quantity
             <input type="number" />
           </lable>
-          <button type="onSubmit">Add Keg</button>
+          <button type='submit'>Add Keg</button>
         </div>
       </form>
     </div>
