@@ -5,6 +5,7 @@ import Tap from './Tap';
 import AboutUs from './AboutUs';
 import Inventory from './Inventory';
 import InputForm from './InputForm';
+import Admin from './Admin';
 import Error404 from './Error404';
 
 import MotherEarth from '../Assets/mother-earth.png';
@@ -60,7 +61,8 @@ class Body extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterKegList: kegsList
+      masterKegList: kegsList,
+      adminAccess: false
     };
     this.handleAddingKeg = this.handleAddingKeg.bind(this);
   }
@@ -74,7 +76,7 @@ class Body extends React.Component {
       <div>
         <Switch>
           <Route exact path='/' render={()=><Tap masterKegListPass={this.state.masterKegList} />} />
-          <Route path='/inventory' render={()=><Inventory masterKegListPass={this.state.masterKegList} />} />
+          <Route path='/admin' render={(props)=><Admin masterKegListPass={this.state.masterKegList} currentRouterPath={props.location.pathname} adminAccess={this.state.adminAccess} />} />
           <Route path='/inputForm' render={()=><InputForm newKegInput={this.handleAddingKeg}/>} />
           <Route path='/aboutUs' component={ AboutUs } />
           <Route component={Error404} />

@@ -28,7 +28,7 @@ function Nav() {
       <ul>
         <Link to="/" style={linkStyle}><li>Taps</li></Link>
         <Link to="/inputForm" style={linkStyle}><li>Input New Keg</li></Link>
-        <Link to="/inventory" style={linkStyle}><li>Keg Inventory</li></Link>
+        <Link to="/admin" style={linkStyle}><li>Keg Inventory</li></Link>
         <Link to="/aboutUs" style={linkStyle}><li>About Us</li></Link>
       </ul>
     </div>

@@ -12,8 +12,8 @@ _Helps employees and customers keep track and buy Beer._
 
 * windows Command Prompt want take touch command: Solution using gitBash.
 * windows didn't like lint, did some looking and found a solution using a config file.
-* Have to make the body and switch tag for link in Nav so I can work on Nav
-* I forgot about the HashRouter That live in index.jsx. kinda important
+* Have to make the body and switch tag for link in Nav so I can work on Nav.
+* I forgot about the HashRouters, they live in index.jsx. Kinda important.
 
 ## File Tree old
 ![tap room tree](/src/Assets/tap-room-tree.jpg)
@@ -24,6 +24,11 @@ _Helps employees and customers keep track and buy Beer._
 ## New component tree
 
 _I put the state in the body component. This is the closest comin ancestor._
+
+## File Tree New
+![tap room tree](/src/Assets/react-taps-tree-new.jpg)
+
+_Add an admin component for employee_
 
 ## Setup/Installation Requirements
 
