@@ -1,54 +1,8 @@
 import React from 'React';
 import TapList from './TapList';
-import MotherEarth from '../Assets/mother-earth.png';
-import Laurelwood from '../Assets/laurelwood.jpg';
-import Stone from '../Assets/stone-logo.png';
-import NewBelgium from '../Assets/new-belgium.jpg';
+import PropTypes from 'prop-types';
 
-const kegsList = [
-  {
-    name: 'Cali Creamin',
-    brewer: 'Mother Earth',
-    price: 20,
-    abv: 4.5,
-    img: MotherEarth,
-    quantity: 124
-  },
-  {
-    name: 'Sintax',
-    brewer: 'Mother Earth',
-    price: 14,
-    abv: 8,
-    img: MotherEarth,
-    quantity: 124
-  },
-  {
-    name: 'Free Range Red',
-    brewer: 'Laurelwood',
-    price: 16,
-    abv: 6,
-    img: Laurelwood,
-    quantity: 124
-  },
-  {
-    name: 'Stone IPA',
-    brewer: 'Stone',
-    price: 15,
-    abv: 6.5,
-    img: Stone,
-    quantity: 124
-  },
-  {
-    name: 'Fat Tire',
-    brewer: 'New Belgium',
-    price: 20,
-    abv: 4.5,
-    img: NewBelgium,
-    quantity: 124
-  }
-];
-
-function Tap() {
+function Tap(props) {
   return (
     <div>
       <style jsx>{`
@@ -66,18 +20,22 @@ function Tap() {
       `}</style>
       <h1>Kegs For Sale</h1>
       <div className="kegBox">
-        {kegsList.map((tapList, index) =>
-          <TapList name={tapList.name}
-            brewer={tapList.brewer}
-            price={tapList.price}
-            abv={tapList.abv}
-            img={tapList.img}
-            quantity={tapList.quantity}
-            key={index}/>
-        )}
+        {Object.keys(props.masterKegListPass).map(function(kegId) {
+          let keg = props.masterKegListPass[kegId];
+          return <TapList name={keg.name}
+            brewer={keg.brewer}
+            price={keg.price}
+            abv={keg.abv}
+            img={keg.img}
+            quantity={keg.quantity}
+            key={kegId}/>;
+        })}
       </div>
     </div>
   );
 }
+Tap.propTypes ={
+  masterKegListPass: PropTypes.object
+};
 
 export default Tap;

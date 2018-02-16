@@ -59,16 +59,16 @@ class Body extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      masterKegList: {kegsList}
+      masterKegList: kegsList
     };
   }
   render(){
     return (
       <div>
         <Switch>
-          <Route exact path='/' component={ Tap } masterKegListPass={this.state.masterKegList} />
-          <Route path='/inventory' component={ Inventory } masterKegListPass={this.state.masterKegList} />
-          <Route path='/inputForm' component={ InputForm } masterKegListPass={this.state.masterKegList} />
+          <Route exact path='/' render={()=><Tap masterKegListPass={this.state.masterKegList} />} />
+          <Route path='/inventory' component={ Inventory } />
+          <Route path='/inputForm' component={ InputForm } />
           <Route path='/aboutUs' component={ AboutUs } />
         </Switch>
       </div>
