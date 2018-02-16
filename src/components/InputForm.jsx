@@ -1,9 +1,22 @@
 import React from 'React';
+import PropTypes from 'prop-types';
 
 function InputForm() {
+  let _names = null;
+  let _brewer = null;
+  let _price = null;
+  let _abv = null;
+  let _logo = null;
+  let _quantity = null;
   function handleNewKegForm(event) {
     event.preventDefault();
-    alert('new works');
+
+    _names.value = '';
+    _brewer.value = '';
+    _price.value = '';
+    _abv.value = '';
+    _logo.value = '';
+    _quantity.value = '';
   }
   return (
     <div className="inputFormDiv">
@@ -14,27 +27,45 @@ function InputForm() {
         <div>
           <label>
             Name:
-            <input type="text" placeholder="Name Of Beer" />
+            <input
+              type="text"
+              placeholder="Name Of Beer"
+              ref={(input) => {_names = input;}}/>
           </label>
           <label>
             Brewer:
-            <input type="text" placeholder="Brewery" />
+            <input
+              type="text"
+              placeholder="Brewery"
+              ref={(input) => {_brewer = input;}}/>
           </label>
           <label>
             Price:
-            <input type="number" />
+            <input
+              type="number"
+              placeholder="Price"
+              ref={(input) => {_price = input;}}/>
           </label>
           <lable>
             ABV:
-            <input type="number" />
+            <input
+              type="number"
+              placeholder="ABV"
+              ref={(input) => {_abv = input;}}/>
           </lable>
           <lable>
             Brewer Logo link:
-            <input type="text" />
+            <input
+              type="text"
+              placeholder="Link to Logo"
+              ref={(input) => {_logo = input;}}/>
           </lable>
           <lable>
             Quantity
-            <input type="number" />
+            <input
+              type="number"
+              placeholder="Number"
+              ref={(input) => {_quantity = input;}}/>
           </lable>
           <button type='submit'>Add Keg</button>
         </div>
@@ -42,5 +73,9 @@ function InputForm() {
     </div>
   );
 }
+
+InputForm.propTypes = {
+
+};
 
 export default InputForm;
