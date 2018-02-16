@@ -71,7 +71,6 @@ function Inventory() {
             brewer={tapList.brewer}
             price={tapList.price}
             abv={tapList.abv}
-            img={tapList.img}
             quantity={tapList.quantity}
             key={index}/>
         )}
