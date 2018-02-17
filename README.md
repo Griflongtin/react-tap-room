@@ -6,7 +6,7 @@
 
 ## Description
 
-_Helps employees and customers keep track and buy Beer._
+_Helps employees and customers keep track and buy Beer. With a login for the employees. The UserName is: Tyler, The Password is: Is-the-Best._
 
 ## Struggle
 
