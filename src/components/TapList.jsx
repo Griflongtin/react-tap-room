@@ -9,7 +9,7 @@ function TapList(props) {
             width: 300px;
             padding: 5px;
             border: 2px solid black;
-            margin: 10px 10px 0; 
+            margin: 10px 10px 0;
             text-align: center;
           }
 
@@ -29,7 +29,7 @@ TapList.propTypes = {
   brewer: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
   abv: PropTypes.number.isRequired,
-  img: PropTypes.string.isRequired,
+  img: PropTypes.string,
   quantity: PropTypes.number.isRequired
 };
 

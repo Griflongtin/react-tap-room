@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Tap from './Tap';
 import AboutUs from './AboutUs';
-import Inventory from './Inventory';
+
 import InputForm from './InputForm';
 import Admin from './Admin';
 import Error404 from './Error404';
@@ -65,10 +65,24 @@ class Body extends React.Component {
       adminAccess: false
     };
     this.handleAddingKeg = this.handleAddingKeg.bind(this);
+    this.handleLogIn = this.handleLogIn.bind(this);
   }
   handleAddingKeg(newKeg){
     let newMasterKegList = Object.assign({}, this.state.masterKegList,  {newKeg});
     this.setState({masterKegList: newMasterKegList});
+  }
+
+  handleLogIn(login){
+    let userName = false;
+    let password = false;
+    if(login.userName === 'Tyler'){userName = true;}
+    if(login.password === 'Is-the-best'){password = true;}
+    if(userName && password){
+      this.setState({adminAccess: true});
+    } else{
+      userName = false;
+      password = false;
+    }
   }
 
   render(){
@@ -76,7 +90,7 @@ class Body extends React.Component {
       <div>
         <Switch>
           <Route exact path='/' render={()=><Tap masterKegListPass={this.state.masterKegList} />} />
-          <Route path='/admin' render={(props)=><Admin masterKegListPass={this.state.masterKegList} currentRouterPath={props.location.pathname} adminAccess={this.state.adminAccess} />} />
+          <Route path='/admin' render={(props)=><Admin masterKegListPass={this.state.masterKegList} currentRouterPath={props.location.pathname} adminAccess={this.state.adminAccess} onLogIn={this.handleLogIn}/>} />
           <Route path='/inputForm' render={()=><InputForm newKegInput={this.handleAddingKeg}/>} />
           <Route path='/aboutUs' component={ AboutUs } />
           <Route component={Error404} />

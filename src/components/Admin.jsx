@@ -5,14 +5,15 @@ import PropTypes from 'prop-types';
 
 function Admin(props){
   let display = null;
-  let _userNames = null;
+  let _userName = null;
   let _password = null;
   function logIn(event) {
     event.preventDefault();
-    alert('loging');
+    props.onLogIn({userName: _userName.value, password: _password.value});
+    _password.value= '';
   }
   if (props.adminAccess === true) {
-    display = <Inventory KegListPass={props.masterKegListPass} currentRouterPath={props.currentRouterPath} />;
+    display = <Inventory masterKegListPass={props.masterKegListPass} currentRouterPath={props.currentRouterPath} />;
   } else {
     display = <div>
       <h1>Logging to see Keg Inventory</h1>
@@ -22,14 +23,14 @@ function Admin(props){
               User Names:
             <input
               type="text"
-              placeholder="Name Of Beer"
-              ref={(input) => {_userNames = input;}}/>
+              placeholder="User Names"
+              ref={(input) => {_userName = input;}}/>
           </label>
           <label>
               Password:
             <input
               type="text"
-              placeholder="Brewery"
+              placeholder="Password"
               ref={(input) => {_password = input;}}/>
           </label>
           <button type='submit'>Log In</button>
@@ -45,8 +46,9 @@ function Admin(props){
   );
 }
 Admin.propTypes ={
-  currentRouterPath: PropTypes.string.isRequired,
+  currentRouterPath: PropTypes.string,
   masterKegListPass: PropTypes.object,
+  onLogIn: PropTypes.func,
   adminAccess: PropTypes.bool
 };
 
