@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 import Logo from './Logo';
 import Nav from './Nav';
 function Header() {

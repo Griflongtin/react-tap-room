@@ -1,7 +1,8 @@
-import React from 'React';
+import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Tap from './Tap';
+
 import AboutUs from './AboutUs';
 
 import InputForm from './InputForm';
